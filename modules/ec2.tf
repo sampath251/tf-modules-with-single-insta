@@ -1,6 +1,6 @@
 resource "aws_instance" "public-instances" {
 
-  ami   = "ami-0ac80df6eff0e70b5" #ubunut
+  ami   = "${var.ami}" #ubunut
   instance_type               = "t2.micro"
   key_name                    = "devops"
   subnet_id                   = "${aws_subnet.pubsub.id}"
